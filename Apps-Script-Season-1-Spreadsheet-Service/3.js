@@ -7,5 +7,6 @@ function myFunction() {
   spreadsheet.getSheetByName('Sheet1');
   Logger.log(spreadsheet.getSheets());
 
-  spreadsheet.insertSheet();//inserting a sheet info
+  //spreadsheet.insertSheet();//inserting a sheet info
+  spreadsheet.insertSheet('MMIT-Sheet',0,{template:spreadsheet.getSheetByName('Sheet1')});
 }
