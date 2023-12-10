@@ -1,4 +1,4 @@
-function myFunction() {
+function ten_one() {
   const id = '1qhx4Jg4QPzrq-k0MoN-MVT16ro6x-AVY3P-QzU1ETPQ';
   const spreadsheet = SpreadsheetApp.openById(id);
   const detroit = spreadsheet.getSheetByName('Copy of Sheet9');
@@ -11,7 +11,7 @@ function myFunction() {
   //2 methods
   //autoFill(Destination,Series)
   //autoFillToNeighbor(series)
-  //range_to_autofill.autoFill(destination, SpreadsheetApp.AutoFillSeries.DEFAULT_SERIES);//two options DEFAULT and ALTERNATE
+   //range_to_autofill.autoFill(destination, SpreadsheetApp.AutoFillSeries.DEFAULT_SERIES);//two options DEFAULT and ALTERNATE
   //It returns values auto-increment by 1.
 
 

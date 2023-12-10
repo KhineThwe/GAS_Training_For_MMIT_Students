@@ -1,4 +1,4 @@
-function myFunction() {
+function settingFormula() {
   const id = '1qhx4Jg4QPzrq-k0MoN-MVT16ro6x-AVY3P-QzU1ETPQ';
   const spreadsheet = SpreadsheetApp.openById(id);
   const sheet_sb = spreadsheet.getSheetByName('Copy of Copy of MMIT-Sheet');

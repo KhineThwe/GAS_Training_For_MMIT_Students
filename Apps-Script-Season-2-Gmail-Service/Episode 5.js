@@ -5,9 +5,10 @@ function reply_and_forward() {
   
   //1
   const num = q[0].getMessageCount();
+  Logger.log(num);
   q[0].getMessages()[num - 1].replyAll('Got Your Messsage Thanks!')
   
-  // q[0].getMessages()[num - 1].forward(recipient);
+  //q[0].getMessages()[num - 1].forward(recipient);
   
 }
 /*

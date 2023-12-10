@@ -1,4 +1,4 @@
-function myFunction() {
+function removingData() {
   const id = '1qhx4Jg4QPzrq-k0MoN-MVT16ro6x-AVY3P-QzU1ETPQ';
   const spreadsheet = SpreadsheetApp.openById(id);
   const sheet_w_data = spreadsheet.getSheetByName('Copy of MMIT-Sheet');
@@ -20,12 +20,12 @@ function myFunction() {
   //range.clear({ contentsOnly: true });
   
   //3
-  var range = sheet_w_data.getRange(6,1);
+  //var range = sheet_w_data.getRange(7,1);
   //delete white cell and shifted columns
-  //range.deleteCells(SpreadsheetApp.Dimension.COLUMNS);
+  //range.deleteCells(SpreadsheetApp.Dimension.ROWS);
 
-  //sheet_w_data.deleteColumns(7,3);
-  // sheet_w_data.deleteRow(7);
+  //sheet_w_data.deleteColumns(2,3);
+  //sheet_w_data.deleteRow(7);
   
  
 }

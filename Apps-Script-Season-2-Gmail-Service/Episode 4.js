@@ -7,7 +7,6 @@ function search() {
   for (const thread of q) {
     console.log(thread.getFirstMessageSubject());
   }
-  
 }
 /*
 search(query,[start,max]->optional)
