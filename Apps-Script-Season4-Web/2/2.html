@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= include('2-css'); ?>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <div class="form-row">
+      <label>First Name: </label><input type="text" id="fname">
+    </div>
+    <div class="form-row">
+      <label>Last Name: </label><input type="text" id="lname">
+    </div>
+    <div class="form-row">
+      <lable>Application: </label>
+      <select id="app">
+        <option>Google Sheets</option>
+        <option>Excels</option>
+        <option>Number</option>
+      </select>
+    </div>
+    <div class="form-row">
+    <button id="btn">Run It!</button>
+    </div>
+   
+  </body>
+ <?!= include('2-js'); ?>
+</html>

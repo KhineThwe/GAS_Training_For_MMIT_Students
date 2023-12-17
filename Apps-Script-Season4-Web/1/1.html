@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <style>
+      .form-row {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <div class="form-row">
+      <label>First Name: </label><input type="text" id="username" />
+    </div>
+    <div class="form-row">
+      <button id="btn">Run It!</button>
+    </div>
+  </body>
+  <script>
+    // window.onload = function() {
+    //   console.log('hah! it ran. ');
+    //   google.script.run
+    //     .withSuccessHandler(wuzSugzezvul)
+    //     .gsServerFunction();
+    //  };
+
+    //  window.wuzSugzezvul = function() {
+    //    console.log('was successful!');
+    //  };
+    // //
+    document.getElementById("btn").addEventListener("click", doStuff);
+
+    function doStuff() {
+      var uname = document.getElementById("username").value;
+      google.script.run.userClicked(uname);
+      document.getElementById("username").value = "";
+    }
+  </script>
+</html>

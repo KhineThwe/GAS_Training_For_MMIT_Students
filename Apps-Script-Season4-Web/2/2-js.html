@@ -1,0 +1,14 @@
+<script>
+  document.getElementById("btn").addEventListener("click", doStuff);
+
+  function doStuff() {
+    var userInfo = {};
+    userInfo.fname = document.getElementById("fname").value;
+    userInfo.lname = document.getElementById("lname").value;
+    userInfo.app = document.getElementById("app").value;
+    google.script.run.userClicked(userInfo);
+    document.getElementById("fname").value = "";
+    document.getElementById("lname").value = "";
+    document.getElementById("app").value = "";
+  }
+</script>
