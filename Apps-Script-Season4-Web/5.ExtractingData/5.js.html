@@ -1,0 +1,41 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var elems = document.querySelectorAll("select");
+    var instances = M.FormSelect.init(elems);
+  });
+
+  document.getElementById("btn").addEventListener("click", doStuff);
+  document.getElementById("zip").addEventListener("input", getEstimate);
+
+  function doStuff() {
+    var userInfo = {};
+    userInfo.fname = document.getElementById("fname").value;
+    userInfo.lname = document.getElementById("lname").value;
+    userInfo.app = document.getElementById("app").value;
+    userInfo.zip = document.getElementById("zip").value;
+    userInfo.estimate = document.getElementById("estimate").value;
+    google.script.run.userClicked(userInfo);
+    document.getElementById("fname").value = "";
+    document.getElementById("lname").value = "";
+    document.getElementById("zip").value = "";
+    document.getElementById("estimate").value = "";
+    M.updateTextFields();
+
+    var myApp = document.getElementById("app");
+    myApp.selectedIndex = 0;
+    M.FormSelect.init(myApp);
+  }
+
+  function getEstimate() {
+    var zipValue = document.getElementById("zip").value;
+    if (zipValue.length === 5) {
+      google.script.run.withSuccessHandler(updateEstimate).getCost(zipValue);
+      //  document.getElementById("estimate").value =zipValue;
+    }
+  }
+
+  function updateEstimate(cost) {
+    document.getElementById("estimate").value = cost;
+    M.updateTextFields();
+  }
+</script>

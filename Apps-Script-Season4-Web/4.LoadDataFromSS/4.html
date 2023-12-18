@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <?!= include('1-css');?>
+  </head>
+  <body>
+
+    <div class="container"> 
+      <? var title = "<b>hello</b>"; ?>
+      <h1><?!= title; ?></h1>
+
+
+      <? var title = "hello"; ?>
+      <h1><?= title; ?></h1>
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="fname" type="text" class="validate">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="lname" type="text" class="validate">
+          <label for="lname">Last Name</label>
+        </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s6">
+      <select id="app">
+        <option disabled selected>Choose your option</option>
+        <? for(var i=0;i<list.length;i++){?>
+            <option><?= list[i]?></option>
+        <?}?>
+        <!-- if you use htmlArray you don't need to use for loop 
+        <?!=list;?> -->
+         <!-- <option>Google Sheets</option>
+         <option>Excels</option>
+         <option>Number</option>
+         <option>Other</option> -->
+      </select>
+      <label>Materialize Select</label>
+    </div>
+      </div>
+
+    <div class="row">
+        <button id="btn" class="waves-effect waves-light btn indigo darken-2"><i class="material-icons left">chevron_right</i>button</button>
+    </div>
+    </div>
+
+    
+  </body>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <?!= include('1-js');?>
+</html>
